@@ -1,0 +1,473 @@
+/* styles.css */
+
+/* Global Styles */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --section-padding: 5rem 2rem;
+    --hover-effect: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Home Section */
+
+
+.profile-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.profile-content p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Make sure the section takes the full width */
+}
+
+#about .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 80%; /* Adjust to match the text width above */
+    margin: 0 auto; /* Center the content */
+}
+
+#about .about-stats {
+    display: flex;
+    justify-content: space-between; /* Space out the boxes */
+    gap: 2rem;
+    width: 80%; /* Ensure it matches the width of the about-content */
+    margin: 0 auto; /* Center the stats section */
+}
+
+.stat {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ensure all boxes are of equal width */
+    transition: var(--hover-effect);
+}
+
+.stat:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Career Section */
+#career .timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: var(--hover-effect);
+}
+
+.timeline-item:hover {
+    transform: scale(1.02);
+}
+
+/* Projects Section */
+#projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--hover-effect);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+#skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: whitesmoke;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--hover-effect);
+    
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+/* Hobbies Section */
+#hobbies .hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.hobby-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--hover-effect);
+}
+
+.hobby-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+    #about .about-content,
+    
+
+    #projects .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+   
+/* Contact Section */
+#home h1 {
+  color: #FFFFFF
+}
+#contact h2 {
+    color: #00aaff; /* Light Sky Blue */
+}
+
+
+#contact {
+    background-color: #f9f9f9; /* Light background to contrast with the form */
+ 
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+#contact .contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px; /* Increase max-width to make the form bigger */
+    margin: 0 auto;
+}
+
+.contact-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.contact-content form {
+    background-color: white;
+    padding: 2rem;
+    width: 230%;  /* Make the form take up most of the screen width */
+    max-width: 1200px;  /* Maximum width of the form */
+    height: 90vh;  /* Set the form height to 90% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Ensure that the fields are spaced out */
+    gap: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-content form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+input,
+textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+textarea {
+    min-height: 150px; /* Make textarea more spacious */
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 2rem; /* Adds space between the form and the social links */
+    text-align: center;
+}
+
+.social-links p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.social-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+    transform: scale(1.2);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    input,
+    textarea {
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+/* Social Links */
+.social-links {
+    margin-top: 3rem;
+}
+
+.social-links p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.social-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+    transform: scale(1.2);
+}
+
+
+
+.profile-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.profile-content p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Button for downloading CV */
+.download-cv-btn {
+    background: #87cefa; 
+    color: white; 
+    padding: 0.8rem 1.5rem; 
+    border: 2px solid #87cefa; 
+    border-radius: 8px; 
+    font-size: 1rem; 
+    text-decoration: none; 
+    text-align: center; 
+    display: inline-block; 
+    cursor: pointer; 
+    margin: 0.5rem; 
+    transition: all 0.3s ease;
+}
+/* Hover effect for the button */
+.download-cv-btn:hover {
+    border-color: #1a71d4;
+    transform: scale(1.1); 
+}
+
+
+
+.stat {
+    border: 1px solid #ddd; /* Optional: Adds a box border */
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;s
+}
+
+.stat-image {
+    width: 100%; /* Adjust to fit the box */
+    max-width: 700px; /* Optional: Set a max width */
+    height: auto;
+    margin-top: 10px; /* Space between text and image */
+    border-radius: 8px; /* Optional: Rounds the image corners */
+}
+
